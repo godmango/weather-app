@@ -29,7 +29,7 @@ export default class App extends Component {
 
 		let url;
 		if (latitude) {
-			url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apikey}`;
+			url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apikey}`;
 		} else {
 			url = `https://api.openweathermap.org/data/2.5/weather?q=saigon&appid=${apikey}`;
 		}
