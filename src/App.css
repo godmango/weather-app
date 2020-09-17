@@ -66,3 +66,9 @@ button {
 	flex-direction: column;
 	width: 600px;
 }
+.realThing {
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

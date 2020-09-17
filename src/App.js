@@ -45,31 +45,37 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<div className="theWholeThing">
-				{" "}
-				<div className="weatherDisplay">
-					<p>City: {this.state.wData && this.state.wData.name}</p>
-					<p>
-						Temperature:{" "}
-						{this.state.wData &&
-							Math.round(this.state.wData.main.temp - 273.15)}
-						°C /{" "}
-						{this.state.wData &&
-							Math.round(((this.state.wData.main.temp - 273.15) * 9) / 5 + 32)}
-						°F
-					</p>
-					<p>Humidity: {this.state.wData && this.state.wData.main.humidity}%</p>
-					<p>{this.state.wData && this.state.wData.weather[0].description}</p>
-				</div>
-				<div className="cityButton">
-					<button onClick={() => this.getCityWeather("Голубинка")}>
-						Голубинка
-					</button>
-					<button onClick={() => this.getCityWeather("seoul")}>Seoul</button>
-					<button onClick={() => this.getCityWeather("tokyo")}>Tokyo</button>
-					<button onClick={() => this.getCityWeather("New York City")}>
-						New York City
-					</button>
+			<div className="realThing">
+				<div className="theWholeThing">
+					{" "}
+					<div className="weatherDisplay">
+						<p>City: {this.state.wData && this.state.wData.name}</p>
+						<p>
+							Temperature:{" "}
+							{this.state.wData &&
+								Math.round(this.state.wData.main.temp - 273.15)}
+							°C /{" "}
+							{this.state.wData &&
+								Math.round(
+									((this.state.wData.main.temp - 273.15) * 9) / 5 + 32
+								)}
+							°F
+						</p>
+						<p>
+							Humidity: {this.state.wData && this.state.wData.main.humidity}%
+						</p>
+						<p>{this.state.wData && this.state.wData.weather[0].description}</p>
+					</div>
+					<div className="cityButton">
+						<button onClick={() => this.getCityWeather("Голубинка")}>
+							Голубинка
+						</button>
+						<button onClick={() => this.getCityWeather("seoul")}>Seoul</button>
+						<button onClick={() => this.getCityWeather("tokyo")}>Tokyo</button>
+						<button onClick={() => this.getCityWeather("New York City")}>
+							New York City
+						</button>
+					</div>
 				</div>
 			</div>
 		);
